@@ -8,7 +8,7 @@ from app.db import (
     actualizar_cliente, buscar_clientes
 )
 
-from app.components.descargar_excel import descargar_excel
+from app.components.exportar_excel import exportar_excel
 from app.components.importar_excel import importar_excel
 
 def crear_gui():
@@ -135,7 +135,7 @@ def crear_gui():
     action.grid(row=8, column=6, sticky="n", padx=10, pady=10)
     tk.Button(action, text="Editar", command=lambda: editar()).pack(pady=(0, 6), fill="x")
     tk.Button(action, text="Eliminar", command=lambda: eliminar()).pack(pady=(0, 6), fill="x")
-    tk.Button(action, text="Exportar Excel", command=lambda: descargar_excel(root)).pack(pady=(0, 6), fill="x")
+    tk.Button(action, text="Exportar Excel", command=lambda: exportar_excel(root)).pack(pady=(0, 6), fill="x")
     tk.Button(action, text="Importar Excel", command=lambda: importar_excel(root, refresh_callback=actualizar_tabla)).pack(pady=(0, 6), fill="x")
 
     # ------------- Utilidades -------------

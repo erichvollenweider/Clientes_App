@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox
 from app.db import obtener_clientes
 import pandas as pd
 
-def descargar_excel(parent=None):
+def exportar_excel(parent=None):
     """
     Abre un diálogo para guardar la tabla de clientes a un archivo .xlsx.
     Si se llama desde la GUI, pasar root como `parent` para que el diálogo sea modal.
